@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайный Санта</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎅 Тайный Санта</h1>
+
+        <div id="login-screen">
+            <input type="text" id="username" placeholder="Ваше имя" required>
+            <div class="actions">
+                <button id="btn-create">Создать комнату</button>
+                <div class="separator">или</div>
+                <input type="text" id="room-input" placeholder="Код комнаты">
+                <button id="btn-join">Войти</button>
+            </div>
+        </div>
+
+        <div id="lobby-screen" class="hidden">
+            <div class="room-info">
+                <p>Комната: <span id="display-room-id"></span></p>
+                <button id="btn-copy">🔗 Копировать ссылку</button>
+            </div>
+            <h3>Участники:</h3>
+            <ul id="players-list"></ul>
+            <button id="btn-start" class="primary-btn">🎄 Провести жеребьёвку</button>
+            <p id="waiting-msg" class="hidden">Ожидание организатора...</p>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>Ваш подопечный:</h2>
+            <div class="result-card">
+                <span id="target-name">...</span>
+            </div>
+            <p>Тсс! Никому не говорите. 🤫</p>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
