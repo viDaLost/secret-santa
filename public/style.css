@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c0392b; /* Красный фон */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 { color: #c0392b; margin-top: 0; }
+.hidden { display: none !important; }
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #2c3e50;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover { opacity: 0.9; }
+#btn-create, #btn-start { background-color: #27ae60; } /* Зеленый */
+
+.room-info {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#players-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#players-list li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-card {
+    background: #c0392b;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 20px 0;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
